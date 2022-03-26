@@ -1,7 +1,10 @@
 package br.com.projetosaula.meusfilmes.beans;
 
-public class Filme {
+import java.io.Serializable;
 
+public class Filme implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
 	private int id;
 	private String titulo;
 	private String genero;
