@@ -13,7 +13,7 @@
 	<header>
 	
 	
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-light bg-primary">
 		  <a class="navbar-brand" href="#">Meus filmes</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -30,12 +30,37 @@
 		    </ul>
 		  </div>
 		</nav>
-	
-		
 	</header>
+	
+	
+<div class = "container mt-4" > 
+	<form>
+	  <div class="mb-3">
+	    <label for="titulo" class="form-label">Titulo</label>
+	    <input type="text" class="form-control" id="titulo" name="titulo" aria-describedby="emailHelp">
+	  </div>
+	  <div class="mb-3">
+	    <label for="genero" class="form-label">Genero</label>
+	    <input type="text" class="form-control" id="genero" name="genero">
+	  </div>
+	  <div class="mb-3">
+	    <label for="restricao" class="form-label">Restrição</label>
+	    <input type="text" class="form-control" id="restricao" name="restricao">
+	  </div>	    
+	  <div class="mb-3 form-check">
+	    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="favorito">
+	    <label class="form-check-label" for="exampleCheck1">Favorito</label>
+	  </div>
+	  <button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+
+	
+	
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
