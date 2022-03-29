@@ -28,23 +28,8 @@ public class HomeController extends HttpServlet implements Servlet {
 		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/home.jsp");
 		rd.forward(request, response);
 		
-		String nome = request.getParameter("email");
-		System.out.println(nome);
 		
-		Filme filme = new Filme();
-		filme.setGenero(request.getParameter("genero"));
-		filme.setTitulo(request.getParameter("titulo"));
-		filme.setRestricao(Integer.parseInt(request.getParameter("restricao")));
-		
-		System.out.println(request.getParameter("favorito"));
-		
-		if (request.getParameter("favorito").equalsIgnoreCase("on")) {
-			filme.setFavorito(true);
-		}else {
-			 filme.setFavorito(false);
-		}
-		
-		System.out.println(filme);
+
 		
 		
 	}	

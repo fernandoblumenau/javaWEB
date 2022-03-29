@@ -1,0 +1,47 @@
+package br.com.projetosaula.meusfilmes.controller;
+
+import jakarta.servlet.http.HttpServlet;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.projetosaula.meusfilmes.beans.Filme;
+import br.com.projetosaula.meusfilmes.dao.FilmeDAO;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/listafilme")
+public class FilmeController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+
+    public FilmeController() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//doGet(request, response);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/listafilme.jsp");
+		rd.forward(request, response);
+		
+		FilmeDAO filmes = new FilmeDAO();
+		
+		List<Filme> listaFilmes= new ArrayList<Filme>();
+		
+		listaFilmes = filmes.getListFilmes();
+		
+		System.out.println("passou");
+		
+		
+	}
+
+}
